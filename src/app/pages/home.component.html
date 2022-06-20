@@ -1,0 +1,6 @@
+<div class="container">
+    <h2>Promoções do dia</h2>
+    <div class="promos" #promos>
+        <app-pizza-card *ngFor="let pizza of pizzas" [pizza]="pizza"></app-pizza-card>
+    </div>
+</div>

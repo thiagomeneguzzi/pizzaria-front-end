@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Pizza } from 'src/app/Interfaces/pizza';
 
 @Component({
   selector: 'app-pizza-card',
@@ -6,12 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pizza-card.component.scss']
 })
 export class PizzaCardComponent implements OnInit {
-
-  pizza = {
-    name: 'Pizza Peperonni',
-    description: 'Mussarela, peperonni.',
-    image: 'https://s.calendarr.com/upload/datas/pi/zz/pizza_c.jpg?auto_optimize=low&width=640'
-  }
+  @Input() pizza!: Pizza;
 
   constructor() { }
 
