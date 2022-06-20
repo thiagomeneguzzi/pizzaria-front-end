@@ -1,5 +1,14 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { Pizzas } from '../interfaces/pizza';
+import { Component, OnInit, } from '@angular/core';
+
+interface Pizza {
+  id: string;
+  name: string;
+  description: string;
+  price: string;
+  image: string;
+}
+
+type Pizzas = Array<Pizza>
 
 @Component({
   selector: 'app-home',
