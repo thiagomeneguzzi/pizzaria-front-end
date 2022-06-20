@@ -1,9 +1,27 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { Order } from 'src/app/interfaces/order';
-import { Pizza } from 'src/app/interfaces/pizza';
 import { UniqueIdService } from 'src/app/shared/unique-id-service/unique-id-service.service';
 import { NewOrderComponent } from '../new-order/new-order.component';
+
+interface Order {
+  id?: string;
+  size: string;
+  flavorOne: string;
+  flavorTwo: string;
+  flavorThree: string;
+  border_flavor: string;
+  observation: string;
+}
+
+interface Pizza {
+  id: string;
+  name: string;
+  description: string;
+  price: string;
+  image: string;
+}
+
+type Pizzas = Array<Pizza>
 
 @Component({
   selector: 'app-pizza-card',
