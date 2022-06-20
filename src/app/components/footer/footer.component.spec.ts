@@ -19,7 +19,13 @@ describe('FooterComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create component', () => {
     expect(component).toBeTruthy();
   });
+
+  it('Year should be the actual year when called', () => {
+    fixture.detectChanges()
+    component = fixture.componentInstance
+    expect(component.year).toBe(new Date().getFullYear())
+  })
 });

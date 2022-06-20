@@ -9,6 +9,7 @@ import { LocalsComponent } from '../components/locals/locals.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { MatIconModule } from '@angular/material/icon';
     MatButtonModule,
     MatGridListModule,
     MatDividerModule,
-    MatIconModule
+    MatIconModule,
+    MatDialogModule
   ],
   exports: [
     HomeComponent

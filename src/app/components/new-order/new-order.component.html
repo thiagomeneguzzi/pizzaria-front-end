@@ -1,0 +1,63 @@
+<h1 mat-dialog-title>Faça seu pedido a seguir.</h1>
+<div mat-dialog-content>
+    <form class="form" [formGroup]="orderForm">
+        <mat-form-field appearance="fill">
+            <mat-label>Tamanho da pizza</mat-label>
+            <mat-select formControlName="size">
+                <mat-option value="small">Broto</mat-option>
+                <mat-option value="medium">Média</mat-option>
+                <mat-option value="big">Grande</mat-option>
+                <mat-option value="giant">Gigante</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Sabor 1</mat-label>
+            <mat-select formControlName="flavorOne">
+                <mat-option value="one">Broto</mat-option>
+                <mat-option value="two">Média</mat-option>
+                <mat-option value="two">Grande</mat-option>
+                <mat-option value="two">Gigante</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Sabor 2</mat-label>
+            <mat-select formControlName="flavorTwo">
+                <mat-option value="one">Broto</mat-option>
+                <mat-option value="two">Média</mat-option>
+                <mat-option value="two">Grande</mat-option>
+                <mat-option value="two">Gigante</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Sabor 3</mat-label>
+            <mat-select formControlName="flavorThree">
+                <mat-option value="one">Broto</mat-option>
+                <mat-option value="two">Média</mat-option>
+                <mat-option value="two">Grande</mat-option>
+                <mat-option value="two">Gigante</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Sabor da borda</mat-label>
+            <mat-select formControlName="border_flavor">
+                <mat-option value="one">Broto</mat-option>
+                <mat-option value="two">Média</mat-option>
+                <mat-option value="two">Grande</mat-option>
+                <mat-option value="two">Gigante</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Observações</mat-label>
+            <textarea matInput formControlName="observation"></textarea>
+        </mat-form-field>
+    </form>
+</div>
+<div mat-dialog-actions class="buttons">
+    <button mat-button class="close-button" (click)="disposeOrder()">Close</button>
+    <button mat-button class="add-button" (click)="addOrder()">Adicionar ao pedido</button>
+</div>

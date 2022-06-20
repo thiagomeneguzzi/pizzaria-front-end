@@ -1,5 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { Pizzas } from '../Interfaces/pizza';
+import { Pizzas } from '../interfaces/pizza';
 
 @Component({
   selector: 'app-home',
