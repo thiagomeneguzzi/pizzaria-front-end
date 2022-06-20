@@ -1,10 +1,18 @@
 .menu {
-    display: flex;
-    justify-content: space-evenly;
+    width: 100%;
 }
+
 
 mat-toolbar {
     background-color: #2D73EB;
+}
+
+.menu-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .menu-title {
