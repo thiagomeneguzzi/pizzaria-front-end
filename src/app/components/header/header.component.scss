@@ -1,0 +1,36 @@
+.menu {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+mat-toolbar {
+    background-color: #2D73EB;
+}
+
+.menu-title {
+    font-size: 24px;
+    color: white;
+}
+
+.menu-items {
+    display: flex;
+    align-items: center;
+}
+
+.menu-list {
+    display: flex;
+    gap: 16px;
+    list-style: none;
+    margin: 0 5%;
+}
+
+.menu-list-item {
+    font-size: 18px;
+    font-weight: 300;
+    color: white;
+    text-decoration: none;
+}
+
+.cart-icon {
+    color: white;
+}
