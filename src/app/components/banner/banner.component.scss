@@ -1,0 +1,29 @@
+.banner {
+    background-color: lightblue;
+    // background-image: url("http://www.ma.senac.br/wp-content/uploads/2016/07/95126774657785e33d4790-768x480.jpg");
+}
+
+.container-content {
+    display: flex;
+    gap: 5%;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 0;
+    margin: 0 24px;
+}
+
+.text {
+    font-weight: bold;
+    font-size: 16px;
+
+}
+
+.button button{
+    background-color: #0E60EE;
+    border: none;
+    border-radius: 50px;
+    font-size: 14px;
+    color: white;
+    padding: 4px 8px;
+    cursor: pointer;
+}
