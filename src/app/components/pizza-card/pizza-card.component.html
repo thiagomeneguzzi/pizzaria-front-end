@@ -1,0 +1,14 @@
+<mat-card class="card">
+    <img mat-card-image [src]="pizza.image" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+        <div class="name">
+            <h2>{{pizza.name}}</h2>
+        </div>
+        <div class="description">
+            <p>{{pizza.description}}</p>
+        </div>
+    </mat-card-content>
+    <mat-card-actions class="buttons">
+      <button mat-button class="add-button">Adicionar ao pedido</button>
+    </mat-card-actions>
+</mat-card>
