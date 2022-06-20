@@ -38,3 +38,9 @@ mat-toolbar {
 .cart-icon {
     color: white;
 }
+
+@media screen and(max-width: 768px) {
+    .menu-title {
+        font-size: 18px;
+    }
+}

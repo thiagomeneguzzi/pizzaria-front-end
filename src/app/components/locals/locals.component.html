@@ -1,1 +1,32 @@
-<p>locals works!</p>
+<div class="container">
+    <div class="title">
+        <h2>Conheça nossa casa</h2>
+    </div>
+    <div class="description">
+        <p>
+            Temos atualmente 1 estabelecimento <br>
+            atendento todos os dias, das 18h às 23h59
+        </p>
+    </div>
+    <div class="container-info">
+        <mat-card class="card">
+            <mat-grid-list [cols]="screenWidth > 768 ? 2 : 1" [rowHeight]="screenWidth > 768 ? '1.5:1' : '2:1' ">
+                <mat-grid-tile class="grid-1"></mat-grid-tile>
+                <mat-grid-tile class="grid-2">
+                    <h3>Pizzaria centro da cidade</h3>
+                    <ul class="info-list">
+                        <li><mat-icon>phone</mat-icon>(48) 3365-9865</li>
+                        <mat-divider></mat-divider>
+                        <li><mat-icon>phone</mat-icon>Rua Irineu Vasconcelo, 1030, Centro - Florianópolis, 88958-699.</li>
+                        <mat-divider></mat-divider>
+                        <li><mat-icon>mouse</mat-icon>(48) 99999-6535</li>
+                        <mat-divider></mat-divider>
+                        <li><mat-icon>mouse</mat-icon>Faça sua reserva!</li>
+                    </ul>
+                </mat-grid-tile>
+            </mat-grid-list>
+        </mat-card>
+    </div>
+
+</div>
+

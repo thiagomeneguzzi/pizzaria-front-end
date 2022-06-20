@@ -1,0 +1,60 @@
+.container {
+    width: 90%;
+    max-width: 850px;
+    margin: 48px auto;
+}
+.title h2{
+    font-size: 24px;
+    color: #102f64;
+    font-weight: bold;
+}
+.description p {
+    letter-spacing: 1.25px;
+}
+
+:host mat-card {
+    padding: 0 !important;
+}
+
+.card {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.grid-1 {
+    background-image: url('../../../assets/images/restaurant.png');
+    background-size: cover;
+}
+
+:host ::ng-deep mat-grid-list {
+    max-height: 450px !important;
+}
+
+:host ::ng-deep .mat-grid-tile-content {
+    display: block;
+}
+
+.grid-2 h3 {
+    width: 80%;
+    margin: 4px auto;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.info-list {
+    list-style: none;
+}
+
+.info-list li{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+}
+
+mat-divider {
+    width: 85% !important;
+    left: auto !important;
+    margin: 0 auto !important;
+}
