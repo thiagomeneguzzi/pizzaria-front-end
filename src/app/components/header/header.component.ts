@@ -22,4 +22,8 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  teste() {
+    console.log(JSON.parse(localStorage.getItem('pedido')!))
+  }
+
 }

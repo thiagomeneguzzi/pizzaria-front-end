@@ -23,9 +23,12 @@
                 <button mat-menu-item>Cardápio</button>
                 <button mat-menu-item>Promoções</button>
             </mat-menu>
-            <button mat-icon-button aria-label="">
+            <button mat-button aria-label="" (click)="teste()" [matMenuTriggerFor]="cart">
                 <mat-icon class="cart-icon">shopping_cart</mat-icon>
             </button>
+            <mat-menu #cart="matMenu">
+                <h2>Aqui está seu pedido</h2>
+            </mat-menu>
         </div>
     </div>    
 
