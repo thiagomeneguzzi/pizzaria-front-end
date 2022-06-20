@@ -27,10 +27,6 @@
     background-size: cover;
 }
 
-:host ::ng-deep mat-grid-list {
-    max-height: 450px !important;
-}
-
 :host ::ng-deep .mat-grid-tile-content {
     display: block;
 }
