@@ -10,7 +10,7 @@
     </div>
     <div class="container-info">
         <mat-card class="card">
-            <mat-grid-list [cols]="screenWidth > 768 ? 2 : 1" [rowHeight]="'1.5:1'">
+            <mat-grid-list [cols]="screenWidth > 768 ? 2 : 1" [rowHeight]="screenWidth > 768 ? '1.5:1' : '1.25:1' ">
                 <mat-grid-tile class="grid-1"></mat-grid-tile>
                 <mat-grid-tile class="grid-2">
                     <h3>Pizzaria centro da cidade</h3>
