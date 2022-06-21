@@ -1,17 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { UniqueIdService } from 'src/app/shared/unique-id-service/unique-id-service.service';
+import { Order } from 'src/app/shared/interfaces/order';
+import { UniqueIdService } from 'src/app/shared/services/unique-id-service/unique-id-service.service';
 import { NewOrderComponent } from '../new-order/new-order.component';
-
-interface Order {
-  id?: string;
-  size: string;
-  flavorOne: string;
-  flavorTwo: string;
-  flavorThree: string;
-  border_flavor: string;
-  observation: string;
-}
 
 interface Pizza {
   id: string;
