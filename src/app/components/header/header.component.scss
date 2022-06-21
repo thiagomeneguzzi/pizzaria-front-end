@@ -47,6 +47,33 @@ mat-toolbar {
     color: white;
 }
 
+.cart-title {
+    color: #102f64;
+    font-weight: bold;
+    text-align: center;
+    margin: 4px 8px;
+}
+.cart-buttons {
+    display: flex;
+    text-align: center;
+}
+.clean-button {
+    border: 1px solid rgb(202, 76, 76);
+    color: rgb(202, 76, 76);
+    margin: 0 4px;
+}
+.finalize-button {
+    border: 1px solid #447fe4;
+    color: #447fe4;
+    margin: 0 4px;
+}
+.empty-cart {
+    text-align: center;
+    font-size: 16px;
+    color: rgb(202, 76, 76);
+    letter-spacing: 1.25px;
+}
+
 @media screen and(max-width: 768px) {
     .menu-title {
         font-size: 18px;

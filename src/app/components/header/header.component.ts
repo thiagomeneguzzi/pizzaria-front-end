@@ -1,4 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { Order } from 'src/app/shared/interfaces/order';
 
 @Component({
   selector: 'app-header',
@@ -7,7 +8,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  menuOpened: boolean = false;
+  orders: Array<Order> = new Array<Order>();
 
   screenWidth: number = window.innerWidth;
 
@@ -20,10 +21,22 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.getOrders()
   }
 
-  teste() {
-    console.log(JSON.parse(localStorage.getItem('pedido')!))
+  public getOrders() {
+    if(localStorage.getItem('pedido') !== null) {
+      this.orders = JSON.parse(localStorage.getItem('pedido')!)
+    }
+  }
+
+  public clearCart() {
+    localStorage.removeItem('pedido');
+    this.orders = new Array<Order>();
+  }
+
+  public finalizeOrder() {
+    // TODO criar tela de finalizar pedido e utilizar este método pra direcionar para lá.
   }
 
 }

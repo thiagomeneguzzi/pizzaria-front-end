@@ -11,11 +11,24 @@
                 <a routerLink="" class="menu-list-item"><li>Cardápio</li></a>
                 <a routerLink="" class="menu-list-item"><li>Promoções</li></a>
             </ul>
-            <button mat-button aria-label="" (click)="teste()" [matMenuTriggerFor]="cart">
+            <button mat-button aria-label="" [matMenuTriggerFor]="cart" (click)="getOrders()">
                 <mat-icon class="cart-icon">shopping_cart</mat-icon>
             </button>
-            <mat-menu #cart="matMenu">
-                <h2>Aqui está seu pedido</h2>
+            <mat-menu #cart="matMenu" class="cart-menu">
+                <h2 class="cart-title">Aqui está seu pedido</h2>
+                <ul *ngFor="let order of orders" class="cart-list">
+                    <li><b>Tamanho: </b>{{ order.size }}</li>
+                    <li><b>Sabores: </b>{{ order.flavorOne }}{{ order.flavorTwo ? ', '+order.flavorTwo : '' }}{{ order.flavorThree ? ', '+order.flavorThree : '' }}</li>
+                    <li><b>Borda: </b>{{ order.border_flavor }}</li>
+                    <mat-divider></mat-divider>
+                </ul>
+                <div class="cart-buttons" *ngIf="orders.length">
+                    <button mat-flat-button class="clean-button" (click)="clearCart()">Limpar carrinho</button>
+                    <button mat-flat-button class="finalize-button" (click)="finalizeOrder()">Finalizar pedido</button>
+                </div>
+                <div class="empty-cart" *ngIf="!orders.length">
+                    <p>Não há item aqui</p>
+                </div>
             </mat-menu>
         </div>
     
@@ -26,13 +39,27 @@
                 <button mat-menu-item>Cardápio</button>
                 <button mat-menu-item>Promoções</button>
             </mat-menu>
-            <button mat-button aria-label="" (click)="teste()" [matMenuTriggerFor]="cart">
+            <button mat-button aria-label="" [matMenuTriggerFor]="cart" (click)="getOrders()">
                 <mat-icon class="cart-icon">shopping_cart</mat-icon>
             </button>
-            <mat-menu #cart="matMenu">
-                <h2>Aqui está seu pedido</h2>
+            <mat-menu #cart="matMenu" class="cart-menu">
+                <h2 class="cart-title">Aqui está seu pedido</h2>
+                <ul *ngFor="let order of orders" class="cart-list">
+                    <li><b>Tamanho: </b>{{ order.size }}</li>
+                    <li><b>Sabores: </b>{{ order.flavorOne }}{{ order.flavorTwo ? ', '+order.flavorTwo : '' }}{{ order.flavorThree ? ', '+order.flavorThree : '' }}</li>
+                    <li><b>Borda: </b>{{ order.border_flavor }}</li>
+                    <mat-divider></mat-divider>
+                </ul>
+                <div class="cart-buttons" *ngIf="orders.length">
+                    <button mat-flat-button class="clean-button" (click)="clearCart()">Limpar carrinho</button>
+                    <button mat-flat-button class="finalize-button" (click)="finalizeOrder()">Finalizar pedido</button>
+                </div>
+                <div class="empty-cart" *ngIf="!orders.length">
+                    <p>Não há item aqui</p>
+                </div>
             </mat-menu>
         </div>
+
     </div>    
 
 </mat-toolbar>

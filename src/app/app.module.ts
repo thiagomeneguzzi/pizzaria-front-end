@@ -17,6 +17,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { NewOrderComponent } from './components/new-order/new-order.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatDividerModule } from '@angular/material/divider';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     MatInputModule,
     MatFormFieldModule,
     MatSelectModule,
+    MatDividerModule,
     MatCheckboxModule
   ],
   providers: [],
