@@ -1,14 +1,5 @@
 import { Component, OnInit, } from '@angular/core';
-
-interface Pizza {
-  id: string;
-  name: string;
-  description: string;
-  price: string;
-  image: string;
-}
-
-type Pizzas = Array<Pizza>
+import { Pizzas } from '../shared/interfaces/pizza';
 
 @Component({
   selector: 'app-home',
