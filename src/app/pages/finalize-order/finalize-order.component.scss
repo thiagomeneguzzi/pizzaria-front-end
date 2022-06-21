@@ -1,0 +1,53 @@
+.container {
+    margin: 0 16px;
+}
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: fit-content;
+    margin: 16px auto;
+}
+
+.order {
+    margin: 64px;
+}
+
+:host ::ng-deep .mat-card .mat-divider-horizontal {
+    left: none;
+    position: initial;
+}
+
+.form {
+    display: block;
+}
+
+:host ::ng-deep .mat-form-field {
+    display: block;
+}
+
+.row {
+    display: flex;
+    gap: 12px;
+}
+
+.final-value {
+    font-size: 18px;
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.finalize-button {
+    background-color: #447fe4;
+    color: white;
+    margin: 0 auto;
+}

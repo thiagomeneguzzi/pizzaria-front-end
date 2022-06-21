@@ -28,4 +28,5 @@ describe('FooterComponent', () => {
     component = fixture.componentInstance
     expect(component.year).toBe(new Date().getFullYear())
   })
+  
 });

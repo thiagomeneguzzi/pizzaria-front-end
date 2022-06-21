@@ -1,4 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Order } from 'src/app/shared/interfaces/order';
 
 @Component({
@@ -18,7 +19,9 @@ export class HeaderComponent implements OnInit {
     console.log(this.screenWidth)
   }
 
-  constructor() { }
+  constructor(
+    private route: Router
+  ) { }
 
   ngOnInit(): void {
     this.getOrders()
@@ -37,6 +40,7 @@ export class HeaderComponent implements OnInit {
 
   public finalizeOrder() {
     // TODO criar tela de finalizar pedido e utilizar este método pra direcionar para lá.
+    this.route.navigate(['finalize-order'])
   }
 
 }

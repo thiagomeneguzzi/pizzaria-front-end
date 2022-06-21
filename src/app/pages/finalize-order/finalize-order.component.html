@@ -1,0 +1,56 @@
+<div class="container">
+    <mat-card class="card">
+        <div class="order">
+            <h2>Revise o seu pedido</h2>
+            <ul *ngFor="let order of orders" class="cart-list">
+                <li><b>Tamanho: </b>{{ order.size }}</li>
+                <li><b>Sabores: </b>{{ order.flavorOne }}{{ order.flavorTwo ? ', '+order.flavorTwo : '' }}{{ order.flavorThree ? ', '+order.flavorThree : '' }}</li>
+                <li><b>Borda: </b>{{ order.border_flavor }}</li>
+                <mat-divider></mat-divider>
+            </ul>
+        </div>
+
+        <div class="confirmation">
+            <form [formGroup]="finalOrderForm">
+                <div class="row">
+                    <mat-form-field appearance="fill">
+                        <mat-label>CEP</mat-label>
+                        <input matInput type="text" formControlName="cep" (change)="getCepData()">
+                    </mat-form-field>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Bairro</mat-label>
+                        <input matInput type="text" formControlName="neighboor">
+                    </mat-form-field>
+                </div>
+
+                <div class="row">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Rua</mat-label>
+                        <input matInput type="text" formControlName="street">
+                    </mat-form-field>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Número</mat-label>
+                        <input matInput type="text" formControlName="number">
+                    </mat-form-field>
+                </div>
+                
+                <mat-form-field appearance="fill">
+                    <mat-label>Forma de pagamento</mat-label>
+                    <mat-select formControlName="size" formControlName="payment_method">
+                        <mat-option value="Cartão">Cartão</mat-option>
+                        <mat-option value="Dinheiro">Dinheiro</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <div class="final-value">
+                    <p>Valor Final: <b>R$</b> 50,00</p>
+                </div>
+                <div class="button">
+                    <button mat-flat-button (click)="finalizeOrder()" class="finalize-button">Finalizar pedido</button>
+                </div>
+
+            </form>
+        </div>
+    </mat-card>
+
+</div>
