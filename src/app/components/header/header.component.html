@@ -11,9 +11,12 @@
                 <a routerLink="" class="menu-list-item"><li>Cardápio</li></a>
                 <a routerLink="" class="menu-list-item"><li>Promoções</li></a>
             </ul>
-            <button mat-icon-button aria-label="">
+            <button mat-button aria-label="" (click)="teste()" [matMenuTriggerFor]="cart">
                 <mat-icon class="cart-icon">shopping_cart</mat-icon>
             </button>
+            <mat-menu #cart="matMenu">
+                <h2>Aqui está seu pedido</h2>
+            </mat-menu>
         </div>
     
         <div class="menu-items" *ngIf="screenWidth < 768">
