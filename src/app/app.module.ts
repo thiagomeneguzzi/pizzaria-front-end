@@ -18,6 +18,7 @@ import { NewOrderComponent } from './components/new-order/new-order.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatBadgeModule } from '@angular/material/badge';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { MatDividerModule } from '@angular/material/divider';
     MatFormFieldModule,
     MatSelectModule,
     MatDividerModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatBadgeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

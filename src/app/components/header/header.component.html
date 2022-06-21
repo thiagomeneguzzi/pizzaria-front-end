@@ -12,7 +12,7 @@
                 <a routerLink="" class="menu-list-item"><li>Promoções</li></a>
             </ul>
             <button mat-button aria-label="" [matMenuTriggerFor]="cart" (click)="getOrders()">
-                <mat-icon class="cart-icon">shopping_cart</mat-icon>
+                <mat-icon class="cart-icon" [matBadge]="orders.length > 0 ? orders.length : 0" matBadgeColor="warn" matBadgeSize="small">shopping_cart</mat-icon>
             </button>
             <mat-menu #cart="matMenu" class="cart-menu">
                 <h2 class="cart-title">Aqui está seu pedido</h2>
@@ -40,7 +40,7 @@
                 <button mat-menu-item>Promoções</button>
             </mat-menu>
             <button mat-button aria-label="" [matMenuTriggerFor]="cart" (click)="getOrders()">
-                <mat-icon class="cart-icon">shopping_cart</mat-icon>
+                <mat-icon class="cart-icon" [matBadge]="orders.length > 0 ? orders.length : 0" matBadgeColor="warn" matBadgeSize="small">shopping_cart</mat-icon>
             </button>
             <mat-menu #cart="matMenu" class="cart-menu">
                 <h2 class="cart-title">Aqui está seu pedido</h2>

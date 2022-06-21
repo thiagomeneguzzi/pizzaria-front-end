@@ -14,63 +14,72 @@ export class HomeComponent implements OnInit {
       name: 'Pizza Peperonni',
       description: 'Mussarela, peperonni.',
       image: 'https://s.calendarr.com/upload/datas/pi/zz/pizza_c.jpg?auto_optimize=low&width=640',
-      price: 'R$ 50,00'
+      price: 'R$ 50,00',
+      type: 'Tradicional'
     },
     {
       id: 'jndsa',
       name: 'Pizza Peperonni',
       description: 'Mussarela, peperonni.',
       image: 'https://s.calendarr.com/upload/datas/pi/zz/pizza_c.jpg?auto_optimize=low&width=640',
-      price: 'R$ 50,00'
+      price: 'R$ 50,00',
+      type: 'Tradicional'
     },
     {
       id: 'jndsa',
       name: 'Pizza Peperonni',
       description: 'Mussarela, peperonni.',
       image: 'https://s.calendarr.com/upload/datas/pi/zz/pizza_c.jpg?auto_optimize=low&width=640',
-      price: 'R$ 50,00'
+      price: 'R$ 50,00',
+      type: 'Tradicional'
     },
     {
       id: 'jndsa',
       name: 'Pizza Peperonni',
       description: 'Mussarela, peperonni.',
       image: 'https://s.calendarr.com/upload/datas/pi/zz/pizza_c.jpg?auto_optimize=low&width=640',
-      price: 'R$ 50,00'
+      price: 'R$ 50,00',
+      type: 'Tradicional'
     },
     {
       id: 'jndsa',
       name: 'Pizza Peperonni',
       description: 'Mussarela, peperonni.',
       image: 'https://s.calendarr.com/upload/datas/pi/zz/pizza_c.jpg?auto_optimize=low&width=640',
-      price: 'R$ 50,00'
+      price: 'R$ 50,00',
+      type: 'Tradicional'
     },
     {
       id: 'jndsa',
       name: 'Pizza Peperonni',
       description: 'Mussarela, peperonni.',
       image: 'https://s.calendarr.com/upload/datas/pi/zz/pizza_c.jpg?auto_optimize=low&width=640',
-      price: 'R$ 50,00'
+      price: 'R$ 50,00',
+      type: 'Tradicional'
     },
     {
       id: 'jndsa',
       name: 'Pizza Peperonni',
       description: 'Mussarela, peperonni.',
       image: 'https://s.calendarr.com/upload/datas/pi/zz/pizza_c.jpg?auto_optimize=low&width=640',
-      price: 'R$ 50,00'
+      price: 'R$ 50,00',
+      type: 'Tradicional'
     },
     {
       id: 'jndsa',
       name: 'Pizza Peperonni',
       description: 'Mussarela, peperonni.',
       image: 'https://s.calendarr.com/upload/datas/pi/zz/pizza_c.jpg?auto_optimize=low&width=640',
-      price: 'R$ 50,00'
+      price: 'R$ 50,00',
+      type: 'Tradicional'
     },
     {
       id: 'jndsa',
       name: 'Pizza Peperonni',
       description: 'Mussarela, peperonni.',
       image: 'https://s.calendarr.com/upload/datas/pi/zz/pizza_c.jpg?auto_optimize=low&width=640',
-      price: 'R$ 50,00'
+      price: 'R$ 50,00',
+      type: 'Tradicional'
     },
   ]
 
