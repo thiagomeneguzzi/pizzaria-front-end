@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
+import { PizzaPrices } from 'src/app/shared/enums/pizza-prices';
+import { Pizzas } from 'src/app/shared/interfaces/pizza';
+import { UniqueIdService } from 'src/app/shared/services/unique-id-service/unique-id-service.service';
 
 @Component({
   selector: 'app-new-order',
@@ -10,10 +13,12 @@ import { MatDialogRef } from '@angular/material/dialog';
 export class NewOrderComponent implements OnInit {
 
   orderForm!: FormGroup;
+  pizzas!: Pizzas
 
   constructor(
     private formbuilder: FormBuilder,
-    public dialogRef: MatDialogRef<NewOrderComponent>,
+    private dialogRef: MatDialogRef<NewOrderComponent>,
+    private uniqueIdService: UniqueIdService
   ) { }
 
   ngOnInit(): void {
@@ -25,6 +30,33 @@ export class NewOrderComponent implements OnInit {
       border_flavor: ['', Validators.required],
       observation: [''],
     })
+    this.getPizzas();
+  }
+
+  public getPizzas() {
+    this.pizzas = [
+      {
+        id: this.uniqueIdService.generateUniqueId(),
+        name: 'Pizza Peperonni',
+        description: 'Mussarela, peperonni.',
+        image: 'https://s.calendarr.com/upload/datas/pi/zz/pizza_c.jpg?auto_optimize=low&width=640',
+        type: PizzaPrices.traditional
+      },
+      {
+        id: this.uniqueIdService.generateUniqueId(),
+        name: 'Pizza Calabresa',
+        description: 'Mussarela, calabresa e cebola.',
+        image: 'https://s.calendarr.com/upload/datas/pi/zz/pizza_c.jpg?auto_optimize=low&width=640',
+        type: PizzaPrices.traditional
+      },
+      {
+        id: this.uniqueIdService.generateUniqueId(),
+        name: 'Pizza Quatro Queijos',
+        description: 'Mussarela, gorgonzola, provolone e prato.',
+        image: 'https://s.calendarr.com/upload/datas/pi/zz/pizza_c.jpg?auto_optimize=low&width=640',
+        type: PizzaPrices.traditional
+      },
+    ]
   }
 
   public addOrder() {

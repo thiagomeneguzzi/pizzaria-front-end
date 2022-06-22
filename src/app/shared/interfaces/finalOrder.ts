@@ -5,7 +5,9 @@ import { Order } from "./order";
 export interface FinalOrder {
     id?: string;
     orders: Array<Order>;
-    price: string;
+    price: number;
     address: Address;
+    name: string,
+    phone: string,
     payment_method: string;
 }

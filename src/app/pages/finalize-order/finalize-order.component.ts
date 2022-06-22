@@ -1,6 +1,7 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { PizzaPrices } from 'src/app/shared/enums/pizza-prices';
 import { Address } from 'src/app/shared/interfaces/address';
 import { FinalOrder } from 'src/app/shared/interfaces/finalOrder';
 import { Order } from 'src/app/shared/interfaces/order';
@@ -18,13 +19,7 @@ export class FinalizeOrderComponent implements OnInit {
   finalOrderForm!: FormGroup;
 
   orders: Array<Order> = new Array<Order>();
-  screenWidth: number = window.innerWidth;
-
-  @HostListener('window:resize', ['$event'])
-  onResize(event: any) {
-    this.screenWidth = window.innerWidth;
-    console.log(this.screenWidth)
-  }
+  finalValue: number = 0;
 
   constructor(
     private formbuilder: FormBuilder,
@@ -56,6 +51,8 @@ export class FinalizeOrderComponent implements OnInit {
   private generateForm() {
     this.finalOrderForm = this.formbuilder.group({
       cep: ['', Validators.required],
+      name: ['', Validators.required],
+      phone: ['', Validators.required],
       neighboor: ['', Validators.required],
       street: ['', Validators.required],
       number: ['', Validators.required],
@@ -66,6 +63,25 @@ export class FinalizeOrderComponent implements OnInit {
   private getOrders() {
     if(localStorage.getItem('pedido') !== null) {
       this.orders = JSON.parse(localStorage.getItem('pedido')!)
+      this.orders.forEach((order) => {
+        let majorType = 0
+
+        if(order.flavorOne.type.order > majorType) {
+          majorType = order.flavorOne.type.order;
+        }
+
+        if(order.flavorTwo && order.flavorTwo.type.order > majorType) {
+          majorType = order.flavorTwo.type.order;
+        }
+
+        if(order.flavorThree && order.flavorThree.type.order > majorType) {
+          majorType = order.flavorThree.type.order;
+        }
+
+        this.finalValue += majorType == PizzaPrices.traditional.order ? PizzaPrices.traditional.price : 
+                          (majorType == PizzaPrices.special.order ? PizzaPrices.special.price : 
+                          (majorType == PizzaPrices.premium.order ? PizzaPrices.premium.price : 0))
+      })
     }
   }
 
@@ -95,8 +111,10 @@ export class FinalizeOrderComponent implements OnInit {
     return {
       id: this.uniqueIdService.generateUniqueId(),
       orders: this.orders,
-      price: '50',
+      price: this.finalValue,
       address: address,
+      name: this.finalOrderForm.get('name')!.value,
+      phone: this.finalOrderForm.get('phone')!.value,
       payment_method: this.finalOrderForm.get('payment_method')!.value
     };
   }

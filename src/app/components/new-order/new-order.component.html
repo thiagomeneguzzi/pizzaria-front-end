@@ -14,40 +14,30 @@
         <mat-form-field appearance="fill">
             <mat-label>Sabor 1</mat-label>
             <mat-select formControlName="flavorOne">
-                <mat-option value="one">Broto</mat-option>
-                <mat-option value="two">Média</mat-option>
-                <mat-option value="two">Grande</mat-option>
-                <mat-option value="two">Gigante</mat-option>
+                <mat-option *ngFor="let pizza of pizzas" [value]="pizza">{{pizza.name}}</mat-option>
             </mat-select>
         </mat-form-field>
 
         <mat-form-field appearance="fill">
             <mat-label>Sabor 2</mat-label>
             <mat-select formControlName="flavorTwo">
-                <mat-option value="one">Broto</mat-option>
-                <mat-option value="two">Média</mat-option>
-                <mat-option value="two">Grande</mat-option>
-                <mat-option value="two">Gigante</mat-option>
+                <mat-option *ngFor="let pizza of pizzas" [value]="pizza">{{pizza.name}}</mat-option>
             </mat-select>
         </mat-form-field>
 
         <mat-form-field appearance="fill">
             <mat-label>Sabor 3</mat-label>
             <mat-select formControlName="flavorThree">
-                <mat-option value="one">Broto</mat-option>
-                <mat-option value="two">Média</mat-option>
-                <mat-option value="two">Grande</mat-option>
-                <mat-option value="two">Gigante</mat-option>
+                <mat-option *ngFor="let pizza of pizzas" [value]="pizza">{{pizza.name}}</mat-option>
             </mat-select>
         </mat-form-field>
 
         <mat-form-field appearance="fill">
             <mat-label>Sabor da borda</mat-label>
             <mat-select formControlName="border_flavor">
-                <mat-option value="one">Broto</mat-option>
-                <mat-option value="two">Média</mat-option>
-                <mat-option value="two">Grande</mat-option>
-                <mat-option value="two">Gigante</mat-option>
+                <mat-option value="Cheddar">Cheddar</mat-option>
+                <mat-option value="Catupiry">Catupiry</mat-option>
+                <mat-option value="Chocolate">Chocolate</mat-option>
             </mat-select>
         </mat-form-field>
 

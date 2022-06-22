@@ -2,9 +2,12 @@ export interface Pizza {
     id: string;
     name: string;
     description: string;
-    price: string;
     image: string;
-    type: string;
+    type: {
+        order: number;
+        name: string;
+        price: number;
+    };
 }
   
 export type Pizzas = Array<Pizza>

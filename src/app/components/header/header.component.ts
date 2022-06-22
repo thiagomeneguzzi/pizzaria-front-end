@@ -11,7 +11,6 @@ import { Order } from 'src/app/shared/interfaces/order';
 export class HeaderComponent implements OnInit {
 
   orders: Array<Order> = new Array<Order>();
-
   screenWidth: number = window.innerWidth;
 
   @HostListener('window:resize', ['$event'])

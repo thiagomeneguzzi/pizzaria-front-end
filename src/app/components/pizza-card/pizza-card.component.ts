@@ -21,6 +21,7 @@ export class PizzaCardComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
+    console.log(this.pizza)
   }
 
   public makeOrder() {
