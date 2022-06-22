@@ -1,6 +1,6 @@
 Coisas para fazer ainda:
     - Terminar a tela de finalize-order: 
-        - Limpar carrinho quando finalizar pedido.
+        - Limpar carrinho quando finalizar pedido. (CHECK)
         - Criar guard para só acessar esta página se tiver pedido no carrinho. (CHECK)
         - Arrumar responsividade.
         - Adicionar textos para informar usuário do que irá acontecer.

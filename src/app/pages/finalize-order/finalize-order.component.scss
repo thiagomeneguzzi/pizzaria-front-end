@@ -18,9 +18,6 @@
     position: initial;
 }
 
-.form {
-    display: block;
-}
 
 :host ::ng-deep .mat-form-field {
     display: block;
@@ -28,6 +25,8 @@
 
 .row {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 12px;
 }
 
