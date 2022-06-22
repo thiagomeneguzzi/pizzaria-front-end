@@ -12,10 +12,8 @@ export class LocalsComponent implements OnInit {
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
     this.screenWidth = window.innerWidth;
-    console.log(this.screenWidth)
   }
-
-
+  
   constructor() { }
 
   ngOnInit(): void {

@@ -1,16 +1,20 @@
-import { TestBed } from '@angular/core/testing';
-
 import { UniqueIdService } from './unique-id-service.service';
 
 describe('UniqueIdServiceService', () => {
   let service: UniqueIdService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(UniqueIdService);
+    service = new UniqueIdService();
   });
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
+  it(`${UniqueIdService.prototype.generateUniqueId} should generate an id when called`, () => {
+    expect(service.generateUniqueId()).toBeTruthy()
+  })
+
+  it(`${UniqueIdService.prototype.getNumberOfGeneratedIds} should return the number of generated ids when called`, () => {
+    service.generateUniqueId()
+    service.generateUniqueId()
+    expect(service.getNumberOfGeneratedIds()).toBe(2)
+  })
+
 });
