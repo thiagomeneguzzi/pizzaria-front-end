@@ -1,3 +1,4 @@
+import { i18nMetaToJSDoc } from '@angular/compiler/src/render3/view/i18n/meta';
 import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Order } from 'src/app/shared/interfaces/order';
@@ -16,7 +17,6 @@ export class HeaderComponent implements OnInit {
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
     this.screenWidth = window.innerWidth;
-    console.log(this.screenWidth)
   }
 
   constructor(
@@ -30,6 +30,8 @@ export class HeaderComponent implements OnInit {
   public getOrders() {
     if(localStorage.getItem('pedido') !== null) {
       this.orders = JSON.parse(localStorage.getItem('pedido')!)
+    } else {
+      this.orders = new Array<Order>();
     }
   }
 
@@ -39,7 +41,6 @@ export class HeaderComponent implements OnInit {
   }
 
   public finalizeOrder() {
-    // TODO criar tela de finalizar pedido e utilizar este método pra direcionar para lá.
     this.route.navigate(['finalize-order'])
   }
 
