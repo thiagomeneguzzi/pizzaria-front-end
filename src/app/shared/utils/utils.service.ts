@@ -6,6 +6,8 @@ const snackStyles = {
   1: 'warning',
   2: 'success'
 }
+const RIGHT = 'right';
+const TOP = 'top';
 
 @Injectable({
   providedIn: 'root'
@@ -19,8 +21,8 @@ export class UtilsService {
   public openSnackBar(message: string, type: number) {
     let config = new MatSnackBarConfig()
 
-    config.horizontalPosition = 'right'
-    config.verticalPosition = 'top'
+    config.horizontalPosition = RIGHT
+    config.verticalPosition = TOP
     config.panelClass = [snackStyles[type as keyof typeof snackStyles]]
     config.duration = 3000
     
