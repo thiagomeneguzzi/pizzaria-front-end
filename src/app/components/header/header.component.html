@@ -44,7 +44,7 @@
                 <h2 class="cart-title">Aqui está seu pedido</h2>
                 <ul *ngFor="let order of orders" class="cart-list">
                     <li><b>Tamanho: </b>{{ order.size }}</li>
-                    <li><b>Sabores: </b>{{ order.flavorOne }}{{ order.flavorTwo ? ', '+order.flavorTwo : '' }}{{ order.flavorThree ? ', '+order.flavorThree : '' }}</li>
+                    <li><b>Sabores: </b>{{ order.flavorOne.name }}{{ order.flavorTwo ? ', '+order.flavorTwo.name : '' }}{{ order.flavorThree ? ', '+order.flavorThree.name : '' }}</li>
                     <li><b>Borda: </b>{{ order.border_flavor }}</li>
                     <mat-divider></mat-divider>
                 </ul>
