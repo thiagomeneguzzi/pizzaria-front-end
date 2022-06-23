@@ -20,6 +20,11 @@ describe('HomeComponent', () => {
     expect(component).toBeTruthy()
   })
 
+  it('Should fill pizzas content during ngOnInit when page is started', () => {
+    fixture.detectChanges()
+    expect(component.pizzas.length).toBeGreaterThanOrEqual(0)
+  })
+
   it(`${HomeComponent.prototype.getPizzas} should fill pizzas content when triggered`, () => {
     component.getPizzas(2)
     expect(component.pizzas.length).toBe(2)

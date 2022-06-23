@@ -23,7 +23,7 @@ export class FinalizeOrderComponent implements OnInit {
 
   constructor(
     private formbuilder: FormBuilder,
-    private viaCepService: ViaCepService,
+    // private viaCepService: ViaCepService,
     private utilsService: UtilsService,
     private uniqueIdService: UniqueIdService,
     private router: Router
@@ -34,14 +34,14 @@ export class FinalizeOrderComponent implements OnInit {
     this.getOrders();
   }
 
-  public getCepData() {
-    this.viaCepService.getDataFromCep(this.getCepFromInput()).subscribe((resp: any) => {
-      this.finalOrderForm.patchValue({
-        neighboor: resp.bairro,
-        street: resp.logradouro,
-      })
-    })
-  }
+  // public getCepData() {
+  //   this.viaCepService.getDataFromCep(this.getCepFromInput()).subscribe((resp: any) => {
+  //     this.finalOrderForm.patchValue({
+  //       neighboor: resp.bairro,
+  //       street: resp.logradouro,
+  //     })
+  //   })
+  // }
 
   private getCepFromInput() {
     let cep = this.finalOrderForm.get('cep')?.value;
