@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { FinalizeOrderComponent } from './finalize-order.component';
 import { FinalizeOrderRoutingModule } from './finalize-order-routing.module';
 import { MatDialogModule } from '@angular/material/dialog';
-import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatButtonModule } from '@angular/material/button';
@@ -12,6 +11,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     FinalizeOrderComponent
@@ -23,7 +23,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatButtonModule,
     MatGridListModule,
     MatDividerModule,
-    MatIconModule,
     MatDialogModule,
     MatFormFieldModule,
     MatInputModule,

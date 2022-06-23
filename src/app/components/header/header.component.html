@@ -7,9 +7,8 @@
     
         <div class="menu-items" *ngIf="screenWidth > 768">
             <ul class="menu-list">
-                <a routerLink="" class="menu-list-item"><li>Início</li></a>
-                <a routerLink="" class="menu-list-item"><li>Cardápio</li></a>
-                <a routerLink="" class="menu-list-item"><li>Promoções</li></a>
+                <a routerLink="home" class="menu-list-item"><li>Início</li></a>
+                <a routerLink="menu" class="menu-list-item"><li>Cardápio</li></a>
             </ul>
             <button mat-button aria-label="" [matMenuTriggerFor]="cart" (click)="getOrders()">
                 <mat-icon class="cart-icon" [matBadge]="orders.length > 0 ? orders.length : 0" matBadgeColor="warn" matBadgeSize="small">shopping_cart</mat-icon>
@@ -35,9 +34,8 @@
         <div class="menu-items" *ngIf="screenWidth < 768">
             <button mat-button class="menu-button" [matMenuTriggerFor]="menu"><mat-icon style="color: white;">menu</mat-icon></button>
             <mat-menu #menu="matMenu">
-                <button mat-menu-item>Início</button>
-                <button mat-menu-item>Cardápio</button>
-                <button mat-menu-item>Promoções</button>
+               <a routerLink="home"><button mat-menu-item>Início</button></a>
+               <a routerLink="menu"><button mat-menu-item>Cardápio</button></a>
             </mat-menu>
             <button mat-button aria-label="" [matMenuTriggerFor]="cart" (click)="getOrders()">
                 <mat-icon class="cart-icon" [matBadge]="orders.length > 0 ? orders.length : 0" matBadgeColor="warn" matBadgeSize="small">shopping_cart</mat-icon>
