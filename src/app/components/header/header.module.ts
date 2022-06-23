@@ -7,6 +7,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { AppRoutingModule } from 'src/app/app-routing.module';
 
 
 
@@ -16,6 +17,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
   ],
   imports: [
     CommonModule,
+    AppRoutingModule,
     MatIconModule,
     MatButtonModule,
     MatMenuModule,
