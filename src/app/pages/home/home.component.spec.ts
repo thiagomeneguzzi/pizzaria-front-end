@@ -21,7 +21,6 @@ describe('HomeComponent', () => {
   })
 
   it(`${HomeComponent.prototype.getPizzas} should fill pizzas content when triggered`, () => {
-    fixture.detectChanges()
     component.getPizzas(2)
     expect(component.pizzas.length).toBe(2)
   })

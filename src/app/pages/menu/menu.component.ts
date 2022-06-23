@@ -9,75 +9,26 @@ import { Pizzas } from 'src/app/shared/interfaces/pizza';
 })
 export class MenuComponent implements OnInit {
 
-  pizzas: Pizzas = [
-    {
-      id: 'jndsa',
-      name: 'Pizza Peperonni',
-      description: 'Mussarela, peperonni.',
-      image: 'https://s.calendarr.com/upload/datas/pi/zz/pizza_c.jpg?auto_optimize=low&width=640',
-      type: PizzaPrices.traditional
-    },
-    {
-      id: 'jndsa',
-      name: 'Pizza Peperonni',
-      description: 'Mussarela, peperonni.',
-      image: 'https://s.calendarr.com/upload/datas/pi/zz/pizza_c.jpg?auto_optimize=low&width=640',
-      type: PizzaPrices.traditional
-    },
-    {
-      id: 'jndsa',
-      name: 'Pizza Peperonni',
-      description: 'Mussarela, peperonni.',
-      image: 'https://s.calendarr.com/upload/datas/pi/zz/pizza_c.jpg?auto_optimize=low&width=640',
-      type: PizzaPrices.traditional
-    },
-    {
-      id: 'jndsa',
-      name: 'Pizza Peperonni',
-      description: 'Mussarela, peperonni.',
-      image: 'https://s.calendarr.com/upload/datas/pi/zz/pizza_c.jpg?auto_optimize=low&width=640',
-      type: PizzaPrices.traditional
-    },
-    {
-      id: 'jndsa',
-      name: 'Pizza Peperonni',
-      description: 'Mussarela, peperonni.',
-      image: 'https://s.calendarr.com/upload/datas/pi/zz/pizza_c.jpg?auto_optimize=low&width=640',
-      type: PizzaPrices.traditional
-    },
-    {
-      id: 'jndsa',
-      name: 'Pizza Peperonni',
-      description: 'Mussarela, peperonni.',
-      image: 'https://s.calendarr.com/upload/datas/pi/zz/pizza_c.jpg?auto_optimize=low&width=640',
-      type: PizzaPrices.traditional
-    },
-    {
-      id: 'jndsa',
-      name: 'Pizza Peperonni',
-      description: 'Mussarela, peperonni.',
-      image: 'https://s.calendarr.com/upload/datas/pi/zz/pizza_c.jpg?auto_optimize=low&width=640',
-      type: PizzaPrices.traditional
-    },
-    {
-      id: 'jndsa',
-      name: 'Pizza Peperonni',
-      description: 'Mussarela, peperonni.',
-      image: 'https://s.calendarr.com/upload/datas/pi/zz/pizza_c.jpg?auto_optimize=low&width=640',
-      type: PizzaPrices.traditional
-    },
-    {
-      id: 'jndsa',
-      name: 'Pizza Peperonni',
-      description: 'Mussarela, peperonni.',
-      image: 'https://s.calendarr.com/upload/datas/pi/zz/pizza_c.jpg?auto_optimize=low&width=640',
-      type: PizzaPrices.traditional
-    },
-  ]
+  pizzas: Pizzas = []
 
   constructor() { }
 
   ngOnInit(): void {
+    this.getPizzas(8)
+  }
+
+  public getPizzas(numberOfPizzas: number) {
+    for(let i = 0; i < numberOfPizzas; i++) {
+      this.pizzas.push(
+        {
+          id: 'jndsa',
+          name: 'Pizza Peperonni',
+          description: 'Mussarela, peperonni.',
+          image: 'https://s.calendarr.com/upload/datas/pi/zz/pizza_c.jpg?auto_optimize=low&width=640',
+          type: PizzaPrices.traditional
+        }
+      );
+    }
   }
 
 }
