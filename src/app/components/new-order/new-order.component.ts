@@ -4,6 +4,7 @@ import { MatDialogRef } from '@angular/material/dialog';
 import { PizzaPrices } from 'src/app/shared/enums/pizza-prices';
 import { Pizzas } from 'src/app/shared/interfaces/pizza';
 import { UniqueIdService } from 'src/app/shared/services/unique-id-service/unique-id-service.service';
+import { UtilsService } from 'src/app/shared/utils/utils.service';
 
 @Component({
   selector: 'app-new-order',
@@ -18,7 +19,8 @@ export class NewOrderComponent implements OnInit {
   constructor(
     private formbuilder: FormBuilder,
     private dialogRef: MatDialogRef<NewOrderComponent>,
-    private uniqueIdService: UniqueIdService
+    private uniqueIdService: UniqueIdService,
+    private utilsService: UtilsService
   ) { }
 
   ngOnInit(): void {
@@ -62,6 +64,8 @@ export class NewOrderComponent implements OnInit {
   public addOrder() {
     if(this.orderForm.valid) {
       this.dialogRef.close(this.orderForm.value)
+    } else {
+      this.utilsService.openSnackBar('Preencha os campos obrigatórios!', 0)
     }
   }
 
