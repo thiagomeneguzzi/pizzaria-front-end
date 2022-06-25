@@ -64,7 +64,7 @@ export class NewOrderComponent implements OnInit {
       this.dialogRef.close(this.orderForm.value)
     }
   }
-  
+
   public disposeOrder() {
     this.dialogRef.close()
   }

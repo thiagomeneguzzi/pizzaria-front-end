@@ -1,5 +1,5 @@
 <h1 mat-dialog-title>Faça seu pedido a seguir.</h1>
-<div mat-dialog-content>
+<mat-dialog-content>
     <form class="form" [formGroup]="orderForm">
         <mat-form-field appearance="fill">
             <mat-label>Tamanho da pizza</mat-label>
@@ -46,7 +46,7 @@
             <textarea matInput formControlName="observation"></textarea>
         </mat-form-field>
     </form>
-</div>
+</mat-dialog-content>
 <div mat-dialog-actions class="buttons">
     <button mat-button class="close-button" (click)="disposeOrder()">Close</button>
     <button mat-button class="add-button" (click)="addOrder()">Adicionar ao pedido</button>

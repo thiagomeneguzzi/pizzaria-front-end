@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { PizzaPrices } from 'src/app/shared/enums/pizza-prices';
@@ -23,7 +23,7 @@ export class FinalizeOrderComponent implements OnInit {
 
   constructor(
     private formbuilder: FormBuilder,
-    // private viaCepService: ViaCepService,
+    private viaCepService: ViaCepService,
     private utilsService: UtilsService,
     private uniqueIdService: UniqueIdService,
     private router: Router
@@ -34,14 +34,14 @@ export class FinalizeOrderComponent implements OnInit {
     this.getOrders();
   }
 
-  // public getCepData() {
-  //   this.viaCepService.getDataFromCep(this.getCepFromInput()).subscribe((resp: any) => {
-  //     this.finalOrderForm.patchValue({
-  //       neighboor: resp.bairro,
-  //       street: resp.logradouro,
-  //     })
-  //   })
-  // }
+  public getCepData() {
+    this.viaCepService.getDataFromCep(this.getCepFromInput()).subscribe((resp: any) => {
+      this.finalOrderForm.patchValue({
+        neighboor: resp.bairro,
+        street: resp.logradouro,
+      })
+    })
+  }
 
   private getCepFromInput() {
     let cep = this.finalOrderForm.get('cep')?.value;
@@ -78,8 +78,8 @@ export class FinalizeOrderComponent implements OnInit {
           majorType = order.flavorThree.type.order;
         }
 
-        this.finalValue += majorType == PizzaPrices.traditional.order ? PizzaPrices.traditional.price : 
-                          (majorType == PizzaPrices.special.order ? PizzaPrices.special.price : 
+        this.finalValue += majorType == PizzaPrices.traditional.order ? PizzaPrices.traditional.price :
+                          (majorType == PizzaPrices.special.order ? PizzaPrices.special.price :
                           (majorType == PizzaPrices.premium.order ? PizzaPrices.premium.price : 0))
       })
     }
@@ -97,7 +97,7 @@ export class FinalizeOrderComponent implements OnInit {
       this.router.navigate(['/home'])
     }
   }
-  
+
   private buildAddress(): Address {
     return {
       cep: this.finalOrderForm.get('cep')!.value,
