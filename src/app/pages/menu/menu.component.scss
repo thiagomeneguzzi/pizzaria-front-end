@@ -1,0 +1,14 @@
+.container {
+    margin: 32px 24px;
+}
+.container h2 {
+    font-size: 24px;
+    color: #102f64;
+    font-weight: bold;
+}
+.row {
+    display: flex;
+    gap: 16px;
+    margin: 0 12px 48px;
+    overflow-x: auto;
+}

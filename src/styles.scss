@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.danger {
+    background-color: #c62828 !important;
+    white-space: pre-wrap;
+}
+.success {
+    background-color: #2e7d32 !important;
+    white-space: pre-wrap;
+}
+.warning {
+    background-color: #ff8f00 !important;
+    white-space: pre-wrap;
+}

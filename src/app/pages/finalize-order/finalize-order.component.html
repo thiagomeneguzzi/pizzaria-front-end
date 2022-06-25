@@ -1,0 +1,84 @@
+<div class="container">
+    <mat-card class="card">
+        <div class="order">
+            <h2>Revise o seu pedido</h2>
+            <ul *ngFor="let order of orders" class="cart-list">
+                <li><b>Tamanho: </b>{{ order.size }}</li>
+                <li><b>Sabores: </b>{{ order.flavorOne.name }}{{ order.flavorTwo ? ', '+order.flavorTwo.name : '' }}{{ order.flavorThree ? ', '+order.flavorThree.name : '' }}</li>
+                <li><b>Borda: </b>{{ order.border_flavor }}</li>
+                <li><b>Observação: </b>{{ order.observation ? order.observation : 'Nenhuma' }}</li>
+                <mat-divider></mat-divider>
+            </ul>
+        </div>
+
+        <div class="confirmation">
+            <form [formGroup]="finalOrderForm">
+
+                <div class="row">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Nome</mat-label>
+                        <input matInput type="text" formControlName="name">
+                        <mat-error *ngIf="finalOrderForm.get('name')?.invalid">{{ getErrorMessage() }}</mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Telefone</mat-label>
+                        <input matInput type="text" formControlName="phone">
+                        <mat-error *ngIf="finalOrderForm.get('phone')?.invalid">{{ getErrorMessage() }}</mat-error>
+                    </mat-form-field>
+                </div>
+
+                <div class="row">
+                    <mat-form-field appearance="fill">
+                        <mat-label>CEP</mat-label>
+                        <input matInput type="text" formControlName="cep">
+                        <mat-error *ngIf="finalOrderForm.get('cep')?.invalid">{{ getErrorMessage() }}</mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Bairro</mat-label>
+                        <input matInput type="text" formControlName="neighboor">
+                        <mat-error *ngIf="finalOrderForm.get('neighboor')?.invalid">{{ getErrorMessage() }}</mat-error>
+                    </mat-form-field>
+                </div>
+
+                <div class="row">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Rua</mat-label>
+                        <input matInput type="text" formControlName="street">
+                        <mat-error *ngIf="finalOrderForm.get('street')?.invalid">{{ getErrorMessage() }}</mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Número</mat-label>
+                        <input matInput type="text" formControlName="number">
+                        <mat-error *ngIf="finalOrderForm.get('number')?.invalid">{{ getErrorMessage() }}</mat-error>
+                    </mat-form-field>
+                </div>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Forma de pagamento</mat-label>
+                    <mat-select formControlName="payment_method">
+                        <mat-option value="Cartão">Cartão</mat-option>
+                        <mat-option value="Dinheiro">Dinheiro</mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="finalOrderForm.get('payment_method')?.invalid">{{ getErrorMessage() }}</mat-error>
+                </mat-form-field>
+
+                <div class="final-value">
+                    <p>Valor Final: <b>R$ </b>{{ finalValue.toFixed(2) }}</p>
+                </div>
+                <div class="button">
+                    <button mat-flat-button (click)="finalizeOrder()" class="finalize-button">Finalizar pedido</button>
+                </div>
+
+            </form>
+        </div>
+    </mat-card>
+
+    <div class="info">
+        <h2 class="info-title">Sobre os pedidos</h2>
+        <ul class="info-list">
+            <li>O pagamento do pedido é realizado quando foi feito a entrega do mesmo.</li>
+            <li>Caso seu pedido demore muito, ou não tenha chego, entre em contato via Whats-App com o ID que você recebeu ao confirmar o pedido.</li>
+        </ul>
+    </div>
+
+</div>
