@@ -9,6 +9,7 @@
                 <mat-option value="Grande">Grande</mat-option>
                 <mat-option value="Gigante">Gigante</mat-option>
             </mat-select>
+            <mat-error *ngIf="orderForm.get('size')?.invalid">{{ getErrorMessage() }}</mat-error>
         </mat-form-field>
 
         <mat-form-field appearance="fill">
@@ -16,6 +17,7 @@
             <mat-select formControlName="flavorOne">
                 <mat-option *ngFor="let pizza of pizzas" [value]="pizza">{{pizza.name}}</mat-option>
             </mat-select>
+            <mat-error *ngIf="orderForm.get('flavorOne')?.invalid">{{ getErrorMessage() }}</mat-error>
         </mat-form-field>
 
         <mat-form-field appearance="fill">
@@ -39,6 +41,7 @@
                 <mat-option value="Catupiry">Catupiry</mat-option>
                 <mat-option value="Chocolate">Chocolate</mat-option>
             </mat-select>
+            <mat-error *ngIf="orderForm.get('border_flavor')?.invalid">{{ getErrorMessage() }}</mat-error>
         </mat-form-field>
 
         <mat-form-field appearance="fill">

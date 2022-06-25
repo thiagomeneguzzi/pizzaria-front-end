@@ -15,7 +15,7 @@ const routes: Routes = [
   {
     path: 'finalize-order',
     loadChildren: () => import('./pages/finalize-order/finalize-order.module').then((m) => m.FinalizeOrderModule),
-    // canLoad: [FinalizeOrderGuard]
+    canLoad: [FinalizeOrderGuard]
   },
   {
     path: 'menu',

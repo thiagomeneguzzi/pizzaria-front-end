@@ -37,6 +37,7 @@ export class HeaderComponent implements OnInit {
   public clearCart() {
     localStorage.removeItem('pedido');
     this.orders = new Array<Order>();
+    this.route.navigate(['home'])
   }
 
   public finalizeOrder() {

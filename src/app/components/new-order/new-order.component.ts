@@ -73,4 +73,8 @@ export class NewOrderComponent implements OnInit {
     this.dialogRef.close()
   }
 
+  public getErrorMessage() {
+    return 'Este campo é obrigatório'
+  }
+
 }

@@ -119,4 +119,8 @@ export class FinalizeOrderComponent implements OnInit {
     };
   }
 
+  public getErrorMessage() {
+    return 'Este campo é obrigatório'
+  }
+
 }
