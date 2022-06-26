@@ -11,7 +11,7 @@
             <p><b>{{pizza.type.name}}</b></p>
         </div>
         <div class="description">
-            <p><b>R$ {{pizza.type.price}}</b></p>
+            <p><b>{{pizza.type.price | currency}}</b></p>
         </div>
     </mat-card-content>
     <mat-card-actions class="buttons">

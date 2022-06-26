@@ -11,4 +11,20 @@
     gap: 16px;
     margin: 12px 12px;
     overflow-x: auto;
+    /* width */
+
+}
+
+.high::-webkit-scrollbar {
+  height: 8px;               /* width of the entire scrollbar */
+}
+
+.high::-webkit-scrollbar-track {
+  background: transparent;        /* color of the tracking area */
+}
+
+.high::-webkit-scrollbar-thumb {
+  background-color: #102f64;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid #102f64;  /* creates padding around scroll thumb */
 }

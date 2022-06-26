@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { DEFAULT_CURRENCY_CODE, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PizzaCardComponent } from './pizza-card.component';
 import { MatCardModule } from '@angular/material/card';
@@ -19,6 +19,9 @@ import { MatDialogModule } from '@angular/material/dialog';
   ],
   exports: [
     PizzaCardComponent
+  ],
+  providers: [
+    {provide: DEFAULT_CURRENCY_CODE, useValue: 'BRL'}
   ]
 })
 export class PizzaCardModule { }
